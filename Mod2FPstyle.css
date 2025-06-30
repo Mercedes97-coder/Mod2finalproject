@@ -23,17 +23,13 @@ a {
 }
 
 a:hover {
-     color: #6415ff
+     color: #6415ff;
+     text-decoration: underline;
 }
 
 
 li {
      list-style: none;
-}
-
-li:hover {
-     color: #6415ff;   
-     text-decoration: underline;
 }
 
 .list__highlight:hover {
@@ -47,7 +43,7 @@ h1 {
 }
 
 h2 {
-     font-size: 36px;
+     font-size: 1.5em;
 }
 
 h3 {
@@ -176,6 +172,11 @@ start
      
 }
 
+.btn__e-mail--submit:hover {
+     background-color: #38079b;
+     color: #fff;
+}
+
 .sign-up {
      max-width: 40%;
 }
@@ -232,8 +233,8 @@ FEATURES
 .features__lists--highlights {
      display: flex;
      flex-wrap: wrap;
-     list-style: none; /* removes bullet points */
-     padding: 0; /* removes default ul padding */
+     list-style: none; 
+     padding: 0; 
      margin: 0;
 }     
 
@@ -307,6 +308,11 @@ FEATURES
     max-width: 140px;
 }
 
+.quality__btn:hover {
+     background-color: #38079b;
+    color: #fff;
+}
+
 
 .quality__img--wrapper {
      max-width: 50%;
@@ -332,33 +338,38 @@ STEPS
 
 .steps__row {
      display: flex;
-     justify-content: space-between;
 }
 
-.steps__img--wrapper
- {
-    width: 50%;
+.steps__img--container {
+     padding-top: 136px;
+     width: 50%;
 }
 
 .steps__img {
      width: 100%;
 }
 
-.steps__1-2-3 {
+.steps__list--wrapper {
      width: 50%;
+     
+}
+
+.steps__title {
+     font-size: 1.5em;
+}
+
+.steps__text {
      display: flex;
-        flex-direction: column;
+     flex-direction: column;
 }
 
-.steps__1-2-3:hover {
-     text-decoration: none;
+.steps__1-2-3 {
+     display: flex;
 }
 
-.steps__description {
+.p__number {
+     font-size: 36px;
      opacity: .5;
-
+     font-weight: 600;
+     padding-right: 12px;
 }
-.steps__list {
-     display: flex;
-}
-
