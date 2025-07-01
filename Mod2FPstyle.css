@@ -125,7 +125,7 @@ start
 
 */
 
-.start__row {
+.sign-up__row {
      display: flex;
      padding: 80px 0;
      width: 100%;
@@ -708,3 +708,44 @@ TESTAMONIALS
     background: rgb(229, 231, 235);
     margin: 0 16px;
 }
+
+/*
+GET-STARTED
+*/
+
+.start__row {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.start__wrap {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     max-width: 1200px;
+     width: 100%;
+     text-align: center;
+     padding: 96px 0;
+     border-radius: 8px;
+     overflow: hidden;
+     position: relative;
+     z-index: 100;
+     background-color: rgb(100, 21, 255);;
+}
+
+.start__title {
+     color: #f7fafc;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.5;
+    z-index: 2;
+}
+
+.start__title,
+.start__btn {
+     width: 50%;
+
+}
+
+
