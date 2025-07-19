@@ -94,7 +94,81 @@ p {
      color: #6415ff
 }
 
+.btn__menu {
+    background-color: transparent;
+    font-size: 40px;
+    text-align: center;
+    border: none;
+    color: #6415ff;
+    display: none;
+}
+
+.menu__backdrop {
+    position: absolute;
+    background-color: #f7fafc;
+    color: #1a202c;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 300ms ease;
+    visibility: hidden;
+    opacity: 0;
+    padding-bottom: 24px;
+}
+
+.menu--open .menu__backdrop {
+     display: flex;
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu--open {
+     max-height: 100vw;
+     overflow-y: hidden;
+}
+
+.menu__links {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     
+}
+
+.menu__list {
+     padding: 12px;
+}
+
+.menu__link {
+     font-size: 24px;
+    color: #1a202c;
+}
+
+.btn__menu--close {
+     position: absolute;
+     right: 20px;
+     top: 10px;
+     padding: 8px;
+     color: white;
+}
+
+
+.menu--open {
+    max-height: 100px;
+    overflow-y: hidden;
+}
+
 /* navigation bar */
+
+#nav {
+      width: 100%;
+     max-width: 1200px;
+     margin: 0 auto;
+
+}
 
 .nav__link--btn {
      transform: all 400ms ease;
@@ -120,6 +194,7 @@ p {
      padding-left: 48px;
      padding-top: 28px;
 }
+
 
 .logo__heading {
      padding: 32px 0 2px 0;
@@ -538,9 +613,9 @@ PRICING
 .pricing__boxes {
      text-align: center;
       width: 100%;
-    max-width: 384px;
-    margin: 64px 32px 0 0;
-    padding-top: 8px;
+    max-width: calc(100%/4)
+    margin: 64px 32px;
+    padding: 8px;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
@@ -924,21 +999,54 @@ MOBILE RESPONSIVENESS
      .nav__row {
           align-items: flex-end;
      }
+
+     
 }
 
 @media (max-width: 1024px) {
-     .start__btn {
+     .btn__menu {
           display: block;
+
+     }
+
+     .sign-up__row {
+          flex-direction: column-reverse;
+          align-items: center;
+     }
+
+     .nav__links {
+          display: none;
+     }
+
+     .sign-up__btn {
+          display: flex;
+     }
+     .design__img {
+          max-width: 75%;
      }
      .nav__row {
           flex-direction: column;
           align-items: center;
      }
 
+     .features__row,
+     .quality__row,
+     .steps__row,
+     .values__row,
+     .pricing__row,
+     .testamonials__row
+     .start__row {
+          padding: 36px 36px;
+     }
+
+     .list__highlight {
+     display: flex;
+     max-width: calc(100%/2);
+}
+
      footer {
           padding: 80px 32px;
      }
-}
 
 @media (max-width: 786px) {
      .sign-up__row,
@@ -978,3 +1086,4 @@ MOBILE RESPONSIVENESS
 
 }
 
+@media (max-width 5)

@@ -6,6 +6,7 @@
     <title>Mod2FinalProject</title>
     <link rel="stylesheet" href="./Mod2FPstyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="Mod2FP.js"></script>
 
 </head>
 <body>
@@ -27,7 +28,22 @@
                 <li class="nav__link"><a href="">Login</a></li>
                 <li class="nav__link"><a href="" class="btn nav__link--btn">Sign up</a></li>
             </ul>
-            </row>
+            <button class="btn__menu btn__menu--open" onclick="openMenu()">
+               <i class="fa-solid fa-bars"></i>
+            </button>
+        <div class="menu__backdrop">
+          <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+            <i class="fa-solid fa-times"></i>
+          </button>
+          <ul class="menu__links">
+            <li class="menu__list"><a href="#" class="menu__link" onclick="closeMenu()">About</a></li>
+            <li class="menu__list"><a href="#" class="menu__link" onclick="closeMenu()">Blog</a></li>
+            <li class="menu__list"><a href="#" class="menu__link" onclick="closeMenu()">Pricing</a></li>
+            <li class="menu__list"><a href="#" class="menu__link" onclick="closeMenu()">Contact Us</a></li>
+            <li class="menu__list"><a href="#" class="menu__link" onclick="closeMenu()">Log In</a></li>
+            <li class="menu__list"><a href="" class="menu__link no-cursor btn" onclick="closeMenu()">Sign Up</a></li>
+          </ul> 
+        </div class="nav__row">
         </div>
     </section>
 
