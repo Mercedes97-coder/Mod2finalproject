@@ -357,6 +357,7 @@ FEATURES
      display: flex;
      flex-direction: column;
      padding-bottom: 32px;
+     max-width: calc(100%/2);
 }
 
 .highlight__img--wrapper {
@@ -513,11 +514,11 @@ VALUES
 .values__title,
 .values__description {
      padding-bottom: 32px;
+     
 }
 
 .value__title {
      display: flex;
-     padding-bottom: 20px;
 }
 
 .value__name{
@@ -526,6 +527,8 @@ VALUES
 .values__points {
      display: flex;
      padding-bottom: 36px;
+     flex-wrap: wrap;
+     max-width: calc(100%/2);
 }
 
 .value__dollar--wrap {
@@ -557,7 +560,7 @@ VALUES
 }
 
 .value__description {
-     padding-right: 24px;
+     padding: 28px;
      line-height: 1.625;
     color: #718096;
     font-size: 16px;
@@ -607,13 +610,14 @@ PRICING
 
 .pricing__option--boxes {
      display: flex;
+     flex-wrap: wrap;
      justify-content: space-around
 }
 
 .pricing__boxes {
      text-align: center;
-      width: 100%;
-    max-width: calc(100%/4)
+    max-width: calc(100%/3);
+    min-width: 280px;
     margin: 64px 32px;
     padding: 8px;
     border-radius: 8px;
@@ -1017,6 +1021,7 @@ MOBILE RESPONSIVENESS
      .nav__links {
           display: none;
      }
+    
 
      .sign-up__btn {
           display: flex;
@@ -1024,7 +1029,8 @@ MOBILE RESPONSIVENESS
      .design__img {
           max-width: 75%;
      }
-     .nav__row {
+     .nav__row,
+     .testamonials__row {
           flex-direction: column;
           align-items: center;
      }
@@ -1034,7 +1040,7 @@ MOBILE RESPONSIVENESS
      .steps__row,
      .values__row,
      .pricing__row,
-     .testamonials__row
+     .testamonials__row,
      .start__row {
           padding: 36px 36px;
      }
@@ -1068,6 +1074,9 @@ MOBILE RESPONSIVENESS
 
      .sign-up__btn {
           min-width: 378px;
+     }
+     .pricing__boxes {
+          max-width: calc(100%/1);
      }
 
      .quality__headline {
