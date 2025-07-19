@@ -114,6 +114,8 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
     transition: all 300ms ease;
     visibility: hidden;
     opacity: 0;
@@ -617,6 +619,8 @@ PRICING
 .pricing__boxes {
      text-align: center;
     max-width: calc(100%/3);
+    display: flex;
+    flex-direction: column;
     min-width: 280px;
     margin: 64px 32px;
     padding: 8px;
@@ -927,6 +931,7 @@ footer {
           
 }
 
+
 .footer__column--title {
     color: #f7fafc;
     margin-bottom: 24px; 
@@ -1053,6 +1058,7 @@ MOBILE RESPONSIVENESS
      footer {
           padding: 80px 32px;
      }
+}    
 
 @media (max-width: 786px) {
      .sign-up__row,
@@ -1091,8 +1097,25 @@ MOBILE RESPONSIVENESS
      .values__img {
           padding-bottom: 48px;
      }
+     .client__img--row {
+          display: flex;
+          flex-direction: column;
+     }
+     .divider {
+          display: none;
+     }
+     
+     .start__title {
+          display: none;
+     }
+
 
 
 }
 
-@media (max-width 5)
+@media (max-width: 575px) {
+     .start__wrap {
+          display: flex;
+          justify-content: space-around;
+     }
+}
