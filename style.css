@@ -508,6 +508,7 @@ VALUES
 .values__wrapper {
      max-width: 50%;
      padding-right: 36px;
+     text-align: center;
 }
 
 .values__super-title  {
@@ -518,10 +519,13 @@ VALUES
 .values__description {
      padding-bottom: 32px;
      
+     
 }
 
 .value__title {
      display: flex;
+     justify-content: center;
+     align-items: center;
 }
 
 .value__name{
@@ -529,9 +533,16 @@ VALUES
 }
 .values__points {
      display: flex;
+     flex-direction: row;
      padding-bottom: 36px;
-     flex-wrap: wrap;
      max-width: calc(100%/2);
+     justify-content: space-between;
+     gap: 20px;
+}
+.values__point {
+     min-width: 250px;
+     
+     
 }
 
 .value__dollar--wrap {
@@ -573,6 +584,8 @@ VALUES
      max-width: 140px;
      font-size: 12px;
      font-weight: bold;
+     margin: 0 auto;
+     display: block;
 }
 
 .values__btn:hover {
@@ -934,11 +947,12 @@ footer {
 
 .footer__list--container {
      display: flex;
-     justify-content: space-around
-          
+     justify-content: space-around;    
 }
 
-
+.footer__list {
+     max-width: calc(100%/5);
+}
 .footer__column--title {
     color: #f7fafc;
     margin-bottom: 24px; 
@@ -961,9 +975,9 @@ footer {
 }
 
 .last__container {
-     display: flex;
-     align-items: center;
-     justify-content: space-around;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .footer__logo--wrapper {
@@ -1021,6 +1035,10 @@ MOBILE RESPONSIVENESS
      .btn__menu {
           padding-top: 24px;
      }
+     .quality__headline {
+     max-width: 100%;
+     align-items: center;
+}
 }
 
 @media (max-width: 1024px) {
@@ -1060,6 +1078,16 @@ MOBILE RESPONSIVENESS
      .start__row {
           padding: 36px 36px;
      }
+
+     .values__points {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .values__point {
+        max-width: 100%;
+        min-width: auto;
+    }
 
      .start__title,
      .start__btn {
@@ -1135,6 +1163,12 @@ MOBILE RESPONSIVENESS
           flex-direction: column;
           align-items: center;
      }
+     .steps__img--container {
+     width: 100%;
+}
+     .quality__img--wrapper {
+     max-width: 100%;
+}
       
     .testamonials__title--wrapper {
         max-width: 90%; 
@@ -1148,6 +1182,10 @@ MOBILE RESPONSIVENESS
 
      .pricing__row {
           margin-top: 40px;
+     }
+     .pricing__description {
+          padding: 0 16px;
+          text-align: center;
      }
 
      .start__title {
@@ -1174,11 +1212,18 @@ MOBILE RESPONSIVENESS
      .values__img {
           padding-bottom: 48px;
      }
+
+     .value__description {
+          padding: 0;
+          min-width: 200px;
+          text-align: center;
+     }
+
      .client__img--row {
           display: flex;
           flex-direction: column;
           align-items: center;
-}
+
      }
     
      .btn__testamonials--wrapper {
@@ -1193,16 +1238,66 @@ MOBILE RESPONSIVENESS
      .client__img--wrapper {
           justify-content: center;
      }
+    .footer__list--container {
+        flex-wrap: wrap;
+    }
     
-
+    .footer__list {
+        max-width: calc(100% / 2);
+        margin-bottom: 32px; 
+    }
+     .last__container {
+     flex-direction: column; 
+     align-items: center;
+     gap: 16px;
+     }
 }
 
 
+
+
 @media (max-width: 575px) {
+
+     .design__img 
+     {display: none;}
+
+     .btn__e-mail--submit,
+     .sign-up__wrapper {
+          max-width: 50%;
+     }
+
+     .list__highlight {
+          max-width: calc(100%/1);;
+     }
      
+      .values__points {
+        flex-direction: column;
+    }
+    
+    .values__point {
+        width: 100%;
+    }
+
      .start__title {
           display: none;
      }
+     .start__btn {
+          flex-direction: column;
+          align-items: center;
+     }
+
+     .btn__start,
+     .btn__contact {
+          max-width: calc(50%);
+     
+     }
+     .footer__list {
+        max-width: 100%;
+    }
+    .last__container {
+     gap: 20px; 
+    }
+    
 }
 
 
